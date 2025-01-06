@@ -1,6 +1,6 @@
-function getRandomNumber(count: number): number {
-  return Math.floor(Math.random() * count);
-}
+// function getRandomNumber(count: number): number {
+//   return Math.floor(Math.random() * count);
+// }
 
 const HomePage = () => {
   // const handleError = (num:number) => {
@@ -11,10 +11,10 @@ const HomePage = () => {
 
   //  handleError(0);
 
-  const showErrorPage = getRandomNumber(2) === 1;
-  if (showErrorPage) {
-    throw new Error("Please show error page");
-  }
+  // const showErrorPage = getRandomNumber(2) === 1;
+  // if (showErrorPage) {
+  //   throw new Error("Please show error page");
+  // }
 
   return (
     <main className="flex justify-center items-center w-full h-screen">
