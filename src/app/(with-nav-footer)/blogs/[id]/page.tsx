@@ -1,10 +1,18 @@
-import { NextPage } from "next";
+import { Metadata, NextPage } from "next";
+
+// BlogPageProps or IProps
 
 interface BlogPageProps {
   params: {
     id: string;
   };
 }
+
+export const generateMetadata = ({ params }: BlogPageProps): Metadata => {
+  return {
+    title: `Blog || ${params.id} || Hablu Programmer`,
+  };
+};
 
 const BlogPage: NextPage<BlogPageProps> = ({ params }) => {
   console.log("🚀 ~ BlogPage ~ props:", { id: params.id });
@@ -17,6 +25,5 @@ const BlogPage: NextPage<BlogPageProps> = ({ params }) => {
 };
 
 export default BlogPage;
-
 
 // URL:- http://localhost:3000/blogs/1
